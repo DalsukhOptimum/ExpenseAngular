@@ -1,0 +1,14 @@
+.box{
+    display: flex;
+    justify-content: center; 
+     flex-direction: column;
+    width: 600px;
+ 
+    
+    
+}
+.item{
+  display: inline-block;
+  margin: 10px;
+
+}

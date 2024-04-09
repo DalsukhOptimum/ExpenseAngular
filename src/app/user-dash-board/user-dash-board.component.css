@@ -1,0 +1,8 @@
+#box{
+    display: flex;
+    flex-direction: row;
+}
+
+.Links{
+    margin: 10px;
+}
