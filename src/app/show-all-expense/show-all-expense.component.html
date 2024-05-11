@@ -9,84 +9,8 @@
 <body>
 
 
-  <app-datewise></app-datewise>
-  <!-- <div  class="container">
-    <h2 class="heading">Filter Your Expense</h2>
-    <form [formGroup]="userForm" (ngSubmit)="submitForm()">
-        <div class="form-group">
-        <label for="startDate">startDate</label>
-        <input type="date" class="form-control" id="startDate" formControlName="startDate">
-        <div *ngIf="userForm?.get('startDate')?.invalid && submitted" class="text-danger">
-          start Date is Required
-        </div>
-      </div>
 
 
-
-     <div class="form-group">
-        <label for="endDate">endDate</label>
-        <input type="date" class="form-control" id="endDate" formControlName="endDate">
-        <div *ngIf="userForm?.get('endDate')?.invalid && submitted" class="text-danger">
-          end Date is Required
-        </div>
-      </div>
-  
-  
-      <div class="form-group">
-        <label for="CreditOrDebit">Credit Or Debit</label>
-        <select class="form-control" id="CreditOrDebit" formControlName="CreditOrDebit">
-          <option value="" >Select Type</option>
-          <option value="C">Credit</option>
-          <option value="D">Debit</option>
-        </select>
-      
-      </div>
-  
-      <button type="submit" class="btn btn-primary">Submit</button>
-
-      <div *ngIf="Message" class="Message mt-3" style="color: green;"><b> {{Message}}</b>
-       
-      </div>
-    </form>
-  </div>
-
-  
-  <div  *ngIf="dataOfDay" >
-    <h2 style="text-align: center;margin-bottom: 21px;margin-top: 21px;"> Expenses Report</h2>
-      <table class="table table-bordered tb-custom">
-          <thead>
-            <tr>
-              <th scope="col">Index</th>
-              <th scope="col">Comment</th>
-              <th scope="col">CreditOrDebit</th>
-              <th scope="col">Amount</th>
-              <th scope="col">ExpenseTime</th>
-              <th scope="col">balance</th>
-             
-            </tr>
-          </thead>
-          <tbody>
-            <tr *ngFor="let obj of dataOfDay;let i = index">
-              <td>{{i+1}}</td>
-              <td>{{obj.Comment}}</td>
-              <td>{{obj.CreditOrDebit}}</td>
-              <td>{{obj.Amount | currency:"INR"}}</td>
-              <td>{{obj.ExpenseTime.slice(0,11)  }} </td>
-              <td>{{obj.balance}}</td>
-            </tr>
-  
-          </tbody>
-        </table>
-  
-  </div> -->
-  
-  
-    <!-- <div *ngIf="Message" class="Message mt-3" style="color: red;"><b> {{Message}}</b>
-    </div> -->
-
-
-
-    
     <div  *ngIf="ExpenseData && allDataFlag" >
       <h2 style="    text-align: center;margin-bottom: 21px;margin-top: 21px;">All Expenses Report</h2>
         <table class="table table-bordered tb-custom">

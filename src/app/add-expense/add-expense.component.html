@@ -1,53 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script type="text/javascript" src="https://www.turnjs.com/lib/turn.min.js "></script> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-</head>
-<body>
-    
-    <div  class="container">
-        <h2 class="heading">Add Expense</h2>
-        <form [formGroup]="userForm" (ngSubmit)="submitForm()">
-            <div class="form-group">
-            <label for="Comment">Comment</label>
-            <input type="text" class="form-control" id="Comment" formControlName="Comment">
-            <div *ngIf="userForm?.get('Comment')?.invalid && submitetd" class="text-danger">
-              Comment is Required
-            </div>
-          </div>
-    
-          <div class="form-group">
-            <label for="Amount">Amount</label>
-            <input type="number" class="form-control" id="Amount" formControlName="Amount">
-            <div *ngIf="userForm?.get('Amount')?.invalid && submitetd" class="text-danger">
-             Please Enter Amount 
-            </div>
-          </div>
-      
-      
-          <div class="form-group">
-            <label for="CreditOrDebit">Credit Or Debit</label>
-            <select class="form-control" id="CreditOrDebit" formControlName="CreditOrDebit">
-              <option value="" >Select Type</option>
-              <option value="C">Credit</option>
-              <option value="D">Debit</option>
-            </select>
-            <div *ngIf="userForm?.get('CreditOrDebit')?.invalid && submitetd" class="text-danger">
-              Please select a Expense Type.
-            </div>
-          </div>
-      
-          <button type="submit" class="btn btn-primary">Submit</button>
 
-          <div *ngIf="Message" class="Message mt-3" style="color: green;"><b> {{Message}}</b>
-           
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript" src="https://www.turnjs.com/lib/turn.min.js "></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="formclass">
+      <form [formGroup]="userForm" (ngSubmit)="submitForm()">
+        <h2 class="heading">Add Expense</h2>
+        <div class="form-group">
+          <label style="float: left;" for="Comment">Comment</label>
+          <input type="text" class="form-control" id="Comment" formControlName="Comment">
+          <div *ngIf="userForm?.get('Comment')?.invalid && submitetd" class="text-danger">
+            Comment is Required
           </div>
-        </form>
-      </div>
+        </div>
+
+        <div class="form-group">
+          <label style="float: left;" for="Amount">Amount</label>
+          <input type="number" class="form-control" id="Amount" formControlName="Amount">
+          <div *ngIf="userForm?.get('Amount')?.invalid && submitetd" class="text-danger">
+            Please Enter Amount
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label style="float: left;" for="CreditOrDebit">Credit Or Debit</label>
+          <select class="form-control" id="CreditOrDebit" formControlName="CreditOrDebit">
+            <option value="">Select Type</option>
+            <option value="C">Credit</option>
+            <option value="D">Debit</option>
+          </select>
+          <div *ngIf="userForm?.get('CreditOrDebit')?.invalid && submitetd" class="text-danger">
+            Please select a Expense Type.
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <div *ngIf="Message" class="Message mt-3" style="color: green;"><b> {{Message}}</b>
+
+        </div>
+      </form>
+    </div>
+  </div>
 
 </body>
+
 </html>

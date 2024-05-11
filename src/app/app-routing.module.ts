@@ -8,8 +8,12 @@ import { UserDashBoardComponent } from './user-dash-board/user-dash-board.compon
 import { ShowAllExpenseComponent } from './show-all-expense/show-all-expense.component';
 import { AppComponent } from './app.component';
 import { DatewiseComponent } from './datewise/datewise.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  {
+    path:"",component:HomeComponent, 
+   },
 { 
   component:LoginComponent,
   path:'login'
@@ -43,7 +47,8 @@ const routes: Routes = [
 {
   component:DatewiseComponent,
   path:'DashBoard/Datewise'
-}
+},
+
 
 
 ];

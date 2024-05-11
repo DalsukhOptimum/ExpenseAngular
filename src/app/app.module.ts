@@ -15,6 +15,10 @@ import { ShowAllExpenseComponent } from './show-all-expense/show-all-expense.com
 import { DatewiseComponent } from './datewise/datewise.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './home/home.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+
 
 
 @NgModule({
@@ -28,7 +32,8 @@ import { FooterComponent } from './footer/footer.component';
     ShowAllExpenseComponent,
     DatewiseComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    HomeComponent 
     
     
 
@@ -39,6 +44,10 @@ import { FooterComponent } from './footer/footer.component';
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
+    FontAwesomeModule
+
+ 
+
     
     
   ],

@@ -5,66 +5,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
 </head>
 
 <body>
+    <div class="box">
+        <div class="sidebar">
 
-    <div>
-
-        <h5> Enjoy ExpenseManager Services</h5>
-        <hr>
-        <div id="box">
-                                                                        
-            <div class="Links">
-
+            <div class="Child" (click)="this.serviceexpense.ComponentName='show-expense-monthwise'">
+                <div class="rowitem">
+                    <button type="button" class="Item" Id="Add-Event"
+                        (click)="this.serviceexpense.ComponentName='show-expense-monthwise'">
+                        <fa-icon class="iconclass" (click)="this.serviceexpense.ComponentName='show-expense-monthwise'"
+                            [icon]="Icon"></fa-icon>&nbsp; <b>monthwise</b></button>
+                </div>
             </div>
-            <div class="Links">
-                <!-- <button type="button" class="btn btn-success" routerLink = "Monthwise">Monthwise</button> -->
-                <!-- <a routerLink = "Monthwise/:{{Id}}" >Monthwise</a> -->
-                <button class="btn btn-outline-success my-2 my-sm-0 btn" type="button"
-                    routerLink="Monthwise">Monthwise</button>
+            <div class="Child" (click)="this.serviceexpense.ComponentName='add-expense'">
+                <div class="rowitem">
 
-            </div>
-            <br>
-            <div class="Links">
-                <!-- <button type="button" class="btn btn-success" routerLink = "AddExpense">AddExpense</button> -->
-                <!-- <a routerLink = "AddExpense/:{{Id}}">AddExpense</a> -->
-                <button class="btn btn-outline-success my-2 my-sm-0 btn" type="button"
-                    routerLink="AddExpense">AddExpense</button>
-
-            </div>
-            <br>
-            <div class="Links">
-                <!-- <button type="button" class="btn btn-success" routerLink = "ShowAllExpense">ShowAllExpense</button> -->
-                <!-- <a routerLink = "ShowAllExpense/:{{Id}}">ShowAllExpense</a> -->
-                <button class="btn btn-outline-success my-2 my-sm-0 btn" type="button" routerLink="ShowAllExpense">Show
-                    All Expense</button>
-
+                    <button type="button" class="Item" Id="Add-Activity"
+                        (click)="this.serviceexpense.ComponentName='add-expense'"> <fa-icon class="iconclass"
+                            (click)="this.serviceexpense.ComponentName='add-expense'" [icon]="Icon"></fa-icon>&nbsp;
+                        <b>Add expense</b></button>
+                </div>
             </div>
 
-            <br>
-            <div class="Links">
-                <!-- <button type="button" class="btn btn-success" routerLink = "ShowAllExpense">ShowAllExpense</button> -->
-                <!-- <a routerLink = "ShowAllExpense/:{{Id}}">ShowAllExpense</a> -->
-                <button class="btn btn-outline-success my-2 my-sm-0 btn" type="button"
-                    routerLink="Datewise">ByDate</button>
+            <div class="Child" (click)="this.serviceexpense.ComponentName='ShowAllExpense'">
+                <div class="rowitem">
 
+                    <button type="button" class="Item" Id="Add-Price"
+                        (click)="this.serviceexpense.ComponentName='ShowAllExpense'">
+                        <fa-icon class="iconclass" (click)="this.serviceexpense.ComponentName='ShowAllExpense'"
+                            [icon]="Icon"></fa-icon>&nbsp;
+                        <b>
+                            ShowAllExpense
+                        </b>
+                    </button>
+                </div>
             </div>
+
+            <div class="Child" (click)="this.serviceexpense.ComponentName='Date-wise'">
+
+                <button type="button" class="Item" Id="Publish"
+                    (click)="this.serviceexpense.ComponentName='Date-wise'">&nbsp;
+                    &nbsp; <fa-icon class="iconclass" (click)="this.serviceexpense.ComponentName='Date-wise'"
+                        [icon]="uploadIcon">
+                    </fa-icon>&nbsp;
+                    <b>Date-wise</b>
+                </button>
+            </div>
+
+
+
+
+
 
 
 
         </div>
 
+        <div class="Componentdata">
+
+            <app-add-expense class="component"
+                *ngIf="this.serviceexpense.ComponentName =='add-expense'"></app-add-expense>
+            <app-show-all-expense class="component"
+                *ngIf="this.serviceexpense.ComponentName == 'ShowAllExpense'"></app-show-all-expense>
+            <app-show-expense-monthwise class="component"
+                *ngIf="this.serviceexpense.ComponentName == 'show-expense-monthwise'"></app-show-expense-monthwise>
+            <app-datewise class="component" *ngIf="this.serviceexpense.ComponentName == 'Date-wise'"></app-datewise>
 
 
+
+        </div>
 
     </div>
-
-
 
 </body>
 
 </html>
-
-<router-outlet></router-outlet>

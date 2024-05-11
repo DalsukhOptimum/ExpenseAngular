@@ -1,8 +1,77 @@
-#box{
-    display: flex;
-    flex-direction: row;
+.sidebar{
+    width: 20%;
+   min-height: 100vh;
+    background-color: aliceblue;
+    border-right: 1px solid rgb(104 131 110);
+    
+}
+.Componentdata {
+    width: 80%;
+    /* height: 80vh; */
+     /* background-color: rgb(15, 153, 26);  */
 }
 
-.Links{
-    margin: 10px;
+.Componentdata .component{
+    background-color: rgb(15, 153, 26);
 }
+
+.box{
+    display: flex;
+  
+}
+.Item{
+     margin: 10px;
+    margin-left: 50px; 
+    border: none;
+    display: flex;
+  
+    background-color: none;
+} 
+.Child
+{
+    padding: 10px;
+    border-bottom: 1px solid rgb(104 131 110);
+
+    
+}
+button{
+  background-color: transparent
+
+  }
+
+  .component{
+    background-color: #bbc0c5;
+  }
+
+  .my-component{
+    position: sticky; 
+    left: 269px;
+    top: 58px;
+  }
+
+  .iconclass{
+   /* height: 40px;
+   width: 40px;
+   margin-right: 0px; */
+  }
+
+  .rowitem{
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    flex-direction: row;
+    
+  }
+
+  .iconclass :hover{
+    cursor: pointer;
+  }
+
+
+  .Child:hover,button:hover,.rowitem:hover {
+    background-color: rgb(158, 167, 179);
+    cursor: pointer;
+    /* background-color:aliceblue; */
+
+  }
+

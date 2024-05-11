@@ -42,7 +42,7 @@ export class LoginComponent {
    //   console.log('Form data:', this.userForm.value);
       //this.http.post('https://localhost:44315/api/ExpenseManager/RegisterUser',this.userForm.value).subscribe((data)=>console.log(data));
 
-      this.service.callMethod('https://localhost:44315/api/ExpenseManager/Login',this.userForm.value).subscribe(
+      this.service.callMethod('https://localhost:44315/api/ExpenseManager/LoginUser',this.userForm.value).subscribe(
        {
         next: (data:any)=>{
           if(data.ID != 0)
